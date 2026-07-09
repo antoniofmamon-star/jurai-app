@@ -9,13 +9,11 @@ services:
         value: production
       - key: PORT
         value: 3000
+      - key: DATABASE_URL
+        sync: false
       - key: JWT_SECRET
-        value: jurai_secret_key_2026
+        sync: false
       - key: JWT_EXPIRES_IN
         value: 7d
-      - key: DATABASE_URL
-        fromDatabase:
-          name: jurai-db
-          property: connectionString
-      - key: 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
+      - key: GROQ_API_KEY
         sync: false
