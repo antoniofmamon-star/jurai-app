@@ -17,5 +17,5 @@ services:
         fromDatabase:
           name: jurai-db
           property: connectionString
-      - key: GROQ_API_KEY
+      - key: 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
         sync: false
