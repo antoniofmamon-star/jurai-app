@@ -20,7 +20,7 @@ const Formacao = sequelize.define('Formacao', {
     allowNull: false
   },
   grau: {
-    type: DataTypes.ENUM('Licenciatura', 'Mestrado', 'Doutoramento', 'Pós-Doutoramento', 'Outro'),
+    type: DataTypes.STRING,
     allowNull: false
   },
   ano_inicio: {

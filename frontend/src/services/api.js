@@ -3,7 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // URL do backend — quando estiveres a testar no telemóvel
 // substitui 'localhost' pelo IP do teu computador (ex: 192.168.1.100)
-export const BASE_URL = 'http://10.108.233.32:3000/api';
+export const BASE_URL = 'http://10.222.239.32:3000/api';
 
 // Criar instância do axios
 const api = axios.create({

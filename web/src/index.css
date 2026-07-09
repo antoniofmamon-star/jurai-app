@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #F8FAFC;
+    color: #1F2937;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-700 hover:bg-primary-800 text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+  .btn-gold {
+    @apply bg-gold-500 hover:bg-gold-600 text-primary-900 font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+  .btn-outline {
+    @apply border border-primary-700 text-primary-700 hover:bg-primary-50 font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+  .btn-danger {
+    @apply bg-red-600 hover:bg-red-700 text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-200 flex items-center gap-2 text-sm;
+  }
+  .input-field {
+    @apply w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm text-gray-800 bg-white focus:outline-none focus:ring-2 focus:ring-primary-700 focus:border-transparent transition-all;
+  }
+  .card {
+    @apply bg-white border border-gray-100 rounded-xl shadow-sm;
+  }
+  .badge-green {
+    @apply bg-green-50 text-green-700 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .badge-amber {
+    @apply bg-amber-50 text-amber-700 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .badge-blue {
+    @apply bg-blue-50 text-blue-700 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .badge-gray {
+    @apply bg-gray-100 text-gray-600 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .badge-gold {
+    @apply bg-amber-50 text-amber-800 text-xs font-medium px-3 py-1 rounded-full;
+  }
+  .badge-red {
+    @apply bg-red-50 text-red-700 text-xs font-medium px-3 py-1 rounded-full;
+  }
+}

@@ -7,7 +7,6 @@ const Mesa = sequelize.define('Mesa', {
     primaryKey: true,
     autoIncrement: true
   },
-  // Dados do estudante
   nome_estudante: {
     type: DataTypes.STRING,
     allowNull: false
@@ -36,7 +35,6 @@ const Mesa = sequelize.define('Mesa', {
     type: DataTypes.STRING,
     allowNull: true
   },
-  // Membros da mesa
   presidente: {
     type: DataTypes.STRING,
     allowNull: true,
@@ -60,22 +58,14 @@ const Mesa = sequelize.define('Mesa', {
     type: DataTypes.STRING,
     allowNull: false
   },
-  // Estado da mesa
   estado: {
-    type: DataTypes.ENUM(
-      'rascunho',
-      'sugerido',
-      'aprovado',
-      'rejeitado'
-    ),
+    type: DataTypes.STRING,
     defaultValue: 'rascunho'
   },
-  // Justificação da IA
   justificacao_ia: {
     type: DataTypes.TEXT,
     allowNull: true
   },
-  // Quem criou a mesa
   criado_por: {
     type: DataTypes.INTEGER,
     allowNull: false

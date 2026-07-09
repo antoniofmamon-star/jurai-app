@@ -16,7 +16,7 @@ const Publicacao = sequelize.define('Publicacao', {
     allowNull: false
   },
   tipo: {
-    type: DataTypes.ENUM('Artigo', 'Conferência', 'Capítulo', 'Outro'),
+    type: DataTypes.STRING,
     allowNull: false
   },
   ano: {

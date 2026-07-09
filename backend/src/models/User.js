@@ -27,12 +27,12 @@ const User = sequelize.define('User', {
     allowNull: false
   },
   perfil: {
-    type: DataTypes.ENUM('admin', 'docente', 'estudante'),
+    type: DataTypes.STRING,
     allowNull: false,
     defaultValue: 'estudante'
   },
   estado: {
-    type: DataTypes.ENUM('pendente', 'activo', 'inactivo'),
+    type: DataTypes.STRING,
     allowNull: false,
     defaultValue: 'pendente'
   },
@@ -40,7 +40,6 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true
   },
-  // Campo para o admin que aprovou
   aprovado_por: {
     type: DataTypes.INTEGER,
     allowNull: true
