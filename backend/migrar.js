@@ -3,14 +3,16 @@ const bcrypt = require('bcryptjs');
 const { Sequelize } = require('sequelize');
 
 const s = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
+  'postgresql://jurai_db_user:845GeJjcoj5Eiu1bTP5lJMC2RHhnSN3f@dpg-d9818qu7r5hc73aos7hg-a.frankfurt-postgres.render.com/jurai_db',
   {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT,
     dialect: 'postgres',
-    logging: false
+    logging: false,
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
   }
 );
 
@@ -26,7 +28,7 @@ async function criarAdmin() {
       }
     );
 
-    console.log('✅ Admin criado com sucesso!');
+    console.log('✅ Admin criado com sucesso na base de dados do Render!');
     console.log('📧 Email: admin@unikivi.ao');
     console.log('🔑 Password: admin123');
 
